@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRUDProductoQ32024.Views.ProductoFormView"
+             xmlns:viewModel="clr-namespace:CRUDProductoQ32024.ViewModels"
+             x:DataType="viewModel:ProductoFormViewModel"
+             Title="Producto Form">
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0,30,0" Spacing="5" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+            <Label Text="Nombre del producto:" />
+            <Entry Text="{Binding Nombre}" Keyboard="Text" />
+
+            <Label Text="Descripción:" />
+            <Entry Text="{Binding Descripcion}" Keyboard="Text" />
+
+            <Label Text="Marca:" />
+            <Entry Text="{Binding Marca}" Keyboard="Text" />
+
+            <Label Text="Precio:" />
+            <Entry Text="{Binding Precio}" Keyboard="Numeric" />
+
+            <Button Text="Guardar" Command="{Binding AddUpdateCommand}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
